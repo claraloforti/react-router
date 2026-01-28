@@ -1,24 +1,7 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
 import ProductsCard from "./ProductsCard";
 
-const endpoint = "https://fakestoreapi.com//products";
 
-
-function ProductsList() {
-
-    // Variabile di stato per lista dei prodotti
-    const [products, setProducts] = useState([]);
-
-    // Funzione che esegue la chiamata Ajax verso endpoint API
-    function fetchProducts() {
-        axios.get(endpoint)
-            .then(response => setProducts(response.data))
-            .catch(error => console.log("Errore nella richiesta"));
-    }
-
-    // useEffect per eseguire la chiamata solo al montaggio del componente
-    useEffect(fetchProducts, []);
+function ProductsList({ products }) { // Array dei prodotti passati dal padre (Products)
 
 
     return (
