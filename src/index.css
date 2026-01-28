@@ -5,4 +5,71 @@
   box-sizing: border-box;
 }
 
-/**/
+/* Generali */
+
+.container {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.navbar,
+footer {
+  background-color: rgba(38, 145, 198, 0.622);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.home-page h2,
+.about-us h2,
+.products-list h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.home-page p,
+.about-us p,
+.products-container {
+  margin: 40px 0;
+}
+
+
+/* NAVBAR */
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar a.active {
+  font-weight: bold;
+  color: rgb(38, 145, 198);
+}
+
+
+/* CARD PRODOTTI */
+
+.product-card {
+  background-color: rgba(38, 145, 198, 0.622);
+  padding: 20px;
+}
+
+.product-card p {
+  margin: 10px 0;
+}
+
+.product-title,
+.product-price {
+  font-weight: bold;
+}
+
+.product-category {
+  font-style: italic;
+}
