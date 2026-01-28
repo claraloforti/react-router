@@ -10,8 +10,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<DefaultLayout />}> {/* Wrapper comune per tutte le route figlie che contiene Navbar e Footer fissi e Outlet dinamico */}
+          {/* index è la route di default */}
           <Route index element={<HomePage />} />
+          {/* Quando l’URL è "/chisiamo", React Router renderizza <AboutUs /> dentro <Outlet /> del DefaultLayout */}
           <Route path="/chisiamo" element={<AboutUs />} />
+          {/* Quando l’URL è "/prodotti", React Router renderizza <Products /> dentro <Outlet /> del DefaultLayout */}
           <Route path="/prodotti" element={<Products />} />
         </Route>
       </Routes>
