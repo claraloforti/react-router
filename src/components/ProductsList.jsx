@@ -6,7 +6,6 @@ function ProductsList({ products }) { // Array dei prodotti passati dal padre (P
 
     return (
         <div className="products-list container">
-            <h2>I nostri prodotti</h2>
             {products.map(product => (
                 <div className="products-container">
                     <ProductsCard

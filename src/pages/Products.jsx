@@ -23,6 +23,7 @@ function Products() {
     return (
         <>
             {/* Passo a ProductsList (figlio) l'array dei prodotti come props */}
+            <h2 className="products-list-title">I nostri prodotti</h2>
             <ProductsList products={products} />
         </>
     )
