@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import Products from "./pages/Products";
 import DefaultLayout from "./layouts/DefaultLayout";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
 
@@ -15,7 +16,10 @@ function App() {
           {/* Quando l’URL è "/chisiamo", React Router renderizza <AboutUs /> dentro <Outlet /> del DefaultLayout */}
           <Route path="/chisiamo" element={<AboutUs />} />
           {/* Quando l’URL è "/prodotti", React Router renderizza <Products /> dentro <Outlet /> del DefaultLayout */}
-          <Route path="/prodotti" element={<Products />} />
+          <Route path="/prodotti" >
+            <Route index element={<Products />} />
+            <Route path=":id" element={<ProductDetail />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,7 +2,7 @@ import ProductsList from "./../components/ProductsList"
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const endpoint = "https://fakestoreapi.com//products";
+const endpoint = "https://fakestoreapi.com//products/";
 
 
 function Products() {
